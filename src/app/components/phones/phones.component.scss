@@ -1,0 +1,54 @@
+.container {
+    direction: rtl;
+    text-align: right;
+
+    .phone-item {
+        text-align: center;
+        border: 1px lightgray solid;
+        margin: 5px -10px;
+        padding: 40px 10px 20px 10px;
+    }
+
+    .name {
+        font-size: 14px;
+    }
+
+    .phone {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .ordered-on,
+    .last-report-date {
+        font-size: 12px;
+        height: 100%;
+        overflow: auto;
+    }
+
+
+    .dot {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        height: 15px;
+        width: 15px;
+
+        border-radius: 50%;
+        display: inline-block;
+
+        &.online {
+            background-color: green;
+        }
+
+        &.offline {
+            background-color: red;
+        }
+    }
+
+    .pull-left {
+        float: left;
+    }
+
+    .pull-right {
+        float: right;
+    }
+}

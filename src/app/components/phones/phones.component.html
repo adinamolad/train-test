@@ -1,0 +1,18 @@
+<div class="container">
+    <input type="search" class="form-control" placeholder="חפש" [formControl]="searchField">
+    <p>{{filteredPhoneList.length}} התקנים רשומים ( {{numOfOnline}} תקניים {{numOfOffline}} בתקלה)</p>
+    <div class="row">
+        <div *ngFor="let phone of filteredPhoneList; let i = index" class="col-lg-3 col-md-4 col-sm-6 ">
+            <div class="phone-item">
+                <div class="company">{{phone.company}}</div>
+                <div class="phone">{{phone.phone}}</div>
+                <div class="online dot" *ngIf="phone.online"></div>
+                <div class="offline dot" *ngIf="!phone.online"></div>
+                <div class="ordered-on"><span class="pull-right">תאריך קניה</span><span
+                        class="pull-left">{{phone.orderedOn}}</span></div>
+                <div class="last-report-date"><span class="pull-right">דווח אחרון</span><span
+                        class="pull-left">{{phone.lastReportDate}}</span></div>
+            </div>
+        </div>
+    </div>
+</div>
